@@ -1,57 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Recipe finder website</title>
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-  <header class="header"></header>
-  <main class="main">Healthy meals, zero fuss
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Discover eight quick, whole-food recipes that you can cook 
-  tonight—no processed junk, no guesswork.
-
-  Start exploring
-
-  What you'll get
-
-  Whole-food recipes
-  Each dish uses everyday, unprocessed ingredients.
-
-  Minimum fuss
-  All recipes are designed to make eating healthy quick and easy.
-
-  Search in seconds
-  Filter by name or ingredient and jump straight to the recipe you need.
-
-  Built for real life
-
-  Cooking shouldn't be complicated. These recipes come in under 
-  30 minutes of active time, fit busy schedules, and taste good 
-  enough to repeat. 
-
-  Whether you're new to the kitchen or just need fresh ideas, 
-  we've got you covered.
-
-  Ready to cook smarter?
-
-  Hit the button, pick a recipe, and get dinner on the table—fast.
-
-  Browse recipes</main>
-  <footer class="footer">
-    Made with ❤️ and 🥑
-  </footer>
-
-  
-
-  
-
-  <script src="app.js"></script>
-</body>
+    <title>Frontend Mentor | Recipe finder website</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
+        <button class="header__icon-open">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 4C0 1.79086 1.79086 0 4 0H36C38.2091 0 40 1.79086 40 4V36C40 38.2091 38.2091 40 36 40H4C1.79086 40 0 38.2091 0 36V4Z"
+              fill="#E0E6E3"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 28H12C11.448 28 11 27.553 11 27C11 26.447 11.448 26 12 26H28C28.552 26 29 26.447 29 27C29 27.553 28.552 28 28 28Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 14H12C11.448 14 11 13.553 11 13C11 12.447 11.448 12 12 12H28C28.552 12 29 12.447 29 13C29 13.553 28.552 14 28 14Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 21H12C11.448 21 11 20.553 11 20C11 19.447 11.448 19 12 19H28C28.552 19 29 19.447 29 20C29 20.553 28.552 21 28 21Z"
+              fill="#163A34"
+            />
+          </svg>
+        </button>
+        <div class="header__wrapper">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">About</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Recipes</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn">
+            <button class="btn header__btn-sign">Browse recipes</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="meals">
+        <h1>Healthy meals, zero fuss</h1>
+        <p>
+          Discover eight quick, whole-food recipes that you can cook tonight—no
+          processed junk, no guesswork.
+        </p>
+        <button class="btn btn__meals">Start exploring</button>
+        <picture>
+          <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+          <source
+            media="(min-width: 600px)"
+            srcset="./assets/images/image-home-hero-large.webp"
+          />
+          <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+          <img
+            src="./assets/images/image-home-hero-small.webp"
+            alt="image home hero"
+          />
+        </picture>
+      </section>
+      <section class="getting">
+        <h2>What you'll get</h2>
+        <div class="getting__block">
+          <div class="getting__block-pecipes">
+            <img
+              src="./assets/images/icon-whole-food-recipes.svg"
+              alt="icon whole food recipes"
+            />
+            <h4>Whole-food recipes</h4>
+            <p>Each dish uses everyday, unprocessed ingredients.</p>
+          </div>
+          <div class="getting__block-fuss">
+            <img
+              src="./assets/images/icon-minimum-fuss.svg"
+              alt="icon minimum fuss"
+            />
+            <h4>Minimum fuss</h4>
+            <p>
+              All recipes are designed to make eating healthy quick and easy.
+            </p>
+          </div>
+          <div class="getting__block-searh">
+            <img
+              src="./assets/images/icon-search-in-seconds.svg"
+              alt="icon search in seconds"
+            />
+            <h4>Search in seconds</h4>
+            <p>
+              Filter by name or ingredient and jump straight to the recipe you
+              need.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="built">
+        <h2>Built for real life</h2>
+        <p>
+          Cooking shouldn't be complicated. These recipes come in under
+          <span>30 minutes</span> of active time, fit busy schedules, and taste
+          good enough to repeat.
+        </p>
+        <p>
+          Whether you're new to the kitchen or just need fresh ideas, we've got
+          you covered.
+        </p>
+        <picture>
+          <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+          <source
+            media="(min-width: 600px)"
+            srcset="./assets/images/image-real-life-large.webp"
+          />
+          <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+          <img
+            src="./assets/images/image-home-real-life-small.webp"
+            alt="image home hero"
+          />
+        </picture>
+      </section>
+      <section class="smarter">
+        <h2>Ready to cook smarter?</h2>
+        <p>Hit the button, pick a recipe, and get dinner on the table—fast.</p>
+        <button class="btn btn__smarter">Browse recipes</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__social">
+        <img src="./assets/images/icon-instagram.svg" alt="icon instagram" />
+        <img src="./assets/images/icon-bluesky.svg" alt="icon bluesky" />        
+        <img src="./assets/images/icon-tiktok.svg" alt="icon tiktok" />
+      </div>
+      <p>Made with ❤️ and 🥑</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -2,25 +2,332 @@
   --neutral-900: hsl(164, 45%, 16%);
   --neutral-600: hsl(166, 22%, 28%);
   --neutral-300: hsl(160, 13%, 84%);
+  --neutral-200: hsl(108, 12%, 92%);
   --neutral-100: hsl(45, 20%, 95%);
   --neutral-0: hsl(0, 0%, 100%);
-  --orange: hsl(21, 98% 71%);
+  --orange: hsl(21, 98%, 71%);
   --teal: hsl(170, 40%, 48%);
   --indigo: hsl(230, 62%, 64%);
+  --font-family: "Nunito Sans", sans-serif;
+  --second-family: "Nunito", sans-serif;
 }
 @font-face {
-    font-family: 'Nunito';
-    src: local('Nunito'), url(../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  font-family: "Nunito";
+  src:
+    local("Nunito"), url(../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
 }
 @font-face {
-    font-family: 'Nunito-Sans';
-    src: local('Nunito-Sans'), url(../assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+  font-family: "Nunito-Sans";
+  src:
+    local("Nunito-Sans"),
+    url(../assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
 }
 
 body {
-    max-width: 375px;
-    width: 100%;
-    min-height: 1932px;
-    padding-inline: 16px;
-    font-family: 'Nunito-Sans';
+  max-width: 375px;
+  width: 100%;
+  min-height: 1932px;
+  padding-inline: 16px;
+  font-family: "Nunito-Sans";
+  background-color: var(--neutral-100);
+  /* position: relative; */
+}
+img {
+  /* Чтобы ширина не выходила за экран изображения */
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  margin-block: 0;
+  padding-inline-start: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+.header {
+  padding-block: 16px;
+  margin-block-end: 48px;
+  border-bottom: 1px solid var(--neutral-300);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.header__logo {
+  display: block;
+  width: 200px;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--neutral-0);
+  width: 343px;
+  height: 231px;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  left: -10px;
+  padding-block-end: 8px;
+  box-shadow: 0 12px 22px -12px var(--neutral-600);
+  display: none;
+}
+.header__menu {
+  padding-block-start: 12px;
+}
+.header__menu-list {
+  width: 327px;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 12px;
+  padding-inline-start: 8px;
+}
+/* .header__menu-item {
+} */
+.header__menu-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: hsl(218, 23%, 21%);
+}
+/* .header__btn {
+} */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--neutral-900);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: var(--neutral-0);
+}
+.header__btn-sign {
+  width: 327px;
+  height: 52px;
+}
+.main {
+  /* position: relative; */
+}
+.meals {
+  margin-block-end: 64px;
+}
+.meals h1 {
+  width: 343px;
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 110%;
+  letter-spacing: -0.04em;
+  color: var(--neutral-900);
+  margin-block: 0 16px;
+  position: relative;
+}
+.meals h1::after {
+  position: absolute;
+  content: "";
+  width: 185px;
+  height: 23px;
+  border-radius: 5px;
+  background-color: var(--orange);
+  top: 30px;
+  left: 0;
+  opacity: 0.55;
+}
+.meals p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--neutral-600);
+  margin-block: 0 32px;
+}
+.btn__meals {
+  width: 198px;
+  height: 60px;
+  margin-block-end: 40px;
+}
+.meals picture {
+  position: relative; /* Создаем точку отсчета для линии */
+  display: block; /* Позволяет псевдоэлементу отображаться */
+  /* width: max-content;  Чтобы контейнер не был шире самой картинки */
+  margin: 0 auto; /* Если нужно отцентрировать картинку */
+}
+
+.meals picture::before {
+  content: "";
+  position: absolute;
+  /* Размещаем линию */
+  top: -125px;
+  right: -15px;
+  /* Параметры самой линии 
+  Укажите реальную ширину вашей линии
+  Укажите реальную высоту */
+  width: 375px;
+  height: 476px;
+  background-image: url("../assets/images/pattern-squiggle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Кладем линию ПОД картинку */
+  z-index: -1;
+}
+
+.meals img {
+  display: block; /* Убирает лишний отступ снизу у картинки */
+  position: relative; /* Гарантирует, что картинка будет выше линии */
+  z-index: 1;
+}
+.getting {
+  margin-block-end: 64px;
+}
+.getting h2 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.04em;
+  color: var(--neutral-900);
+  margin-block: 0 48px;
+}
+.getting__block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.getting__block img {
+  margin-block-end: 20px;
+}
+.getting__block h4 {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  color: var(--neutral-900);
+  margin-block: 0 12px;
+}
+.getting__block p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--neutral-600);
+  margin-block: 0;
+}
+.built {
+  margin-block-end: 64px;
+}
+.built h2 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: var(--neutral-900);
+  margin-block: 0 20px;
+}
+.built p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--neutral-600);
+  margin-block: 0 32px;
+}
+.built span {
+  font-family: var(--second-family);
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.03em;
+}
+/* Псевдокласс :first-of-type находит первого потомка своего типа среди детей родителя.
+Этот селектор выберет именно первый элемент нужного типа (в данном случае — первый <p>), 
+даже если перед ним есть другие теги.
+*/
+.built p:first-of-type {
+  margin-block-end: 20px;
+}
+.built img {
+  border-radius: 10px;
+}
+.smarter {
+  border-radius: 16px;
+  padding: 48px 16px;
+  width: 343px;
+  height: 353px;
+  background: var(--neutral-200);
+  margin-block-end: 32px;
+}
+.smarter h2 {
+  font-family: var(--second-family);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: var(--neutral-900);
+  margin-block: 0 12px;
+}
+.smarter p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--neutral-600);
+}
+.btn__smarter {
+  width: 176px;
+  height: 57px;
+  margin: 0 auto;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 24px;
+  margin-block-end: 24px;
+}
+.footer p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--neutral-900);
 }
