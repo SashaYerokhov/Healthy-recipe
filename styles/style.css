@@ -1,0 +1,26 @@
+:root {
+  --neutral-900: hsl(164, 45%, 16%);
+  --neutral-600: hsl(166, 22%, 28%);
+  --neutral-300: hsl(160, 13%, 84%);
+  --neutral-100: hsl(45, 20%, 95%);
+  --neutral-0: hsl(0, 0%, 100%);
+  --orange: hsl(21, 98% 71%);
+  --teal: hsl(170, 40%, 48%);
+  --indigo: hsl(230, 62%, 64%);
+}
+@font-face {
+    font-family: 'Nunito';
+    src: local('Nunito'), url(../assets/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Nunito-Sans';
+    src: local('Nunito-Sans'), url(../assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+body {
+    max-width: 375px;
+    width: 100%;
+    min-height: 1932px;
+    padding-inline: 16px;
+    font-family: 'Nunito-Sans';
+}
