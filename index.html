@@ -60,7 +60,7 @@
                 <a href="#" class="header__menu-link">Home</a>
               </li>
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link">About</a>
+                <a href="/about.html" class="header__menu-link">About</a>
               </li>
               <li class="header__menu-item">
                 <a href="#" class="header__menu-link">Recipes</a>
@@ -129,21 +129,23 @@
         </div>
       </section>
       <section class="built">
-        <h2>Built for real life</h2>
-        <p>
-          Cooking shouldn't be complicated. These recipes come in under
-          <span>30 minutes</span> of active time, fit busy schedules, and taste
-          good enough to repeat.
-        </p>
-        <p>
-          Whether you're new to the kitchen or just need fresh ideas, we've got
-          you covered.
-        </p>
+        <div class="built__content">
+          <h2>Built for real life</h2>
+          <p>
+            Cooking shouldn't be complicated. These recipes come in under
+            <span>30 minutes</span> of active time, fit busy schedules, and
+            taste good enough to repeat.
+          </p>
+          <p>
+            Whether you're new to the kitchen or just need fresh ideas, we've
+            got you covered.
+          </p>
+        </div>
         <picture>
           <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
           <source
             media="(min-width: 600px)"
-            srcset="./assets/images/image-real-life-large.webp"
+            srcset="./assets/images/image-home-real-life-large.webp"
           />
           <!-- Картинка для всех остальных (мобильных) по умолчанию -->
           <img
@@ -159,11 +161,15 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__social">
-        <img src="./assets/images/icon-instagram.svg" alt="icon instagram" />
-        <img src="./assets/images/icon-bluesky.svg" alt="icon bluesky" />        
-        <img src="./assets/images/icon-tiktok.svg" alt="icon tiktok" />
-      </div>
+      <ul class="footer__social">
+        <li>
+          <img src="./assets/images/icon-instagram.svg" alt="icon instagram" />
+        </li>
+        <li>
+          <img src="./assets/images/icon-bluesky.svg" alt="icon bluesky" />
+        </li>
+        <li><img src="./assets/images/icon-tiktok.svg" alt="icon tiktok" /></li>
+      </ul>
       <p>Made with ❤️ and 🥑</p>
     </footer>
     <script src="app.js"></script>

@@ -1,77 +1,206 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Recipe finder website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Our mission
+    <title>Frontend Mentor | Recipe finder website</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
+        <button class="header__icon-open">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 4C0 1.79086 1.79086 0 4 0H36C38.2091 0 40 1.79086 40 4V36C40 38.2091 38.2091 40 36 40H4C1.79086 40 0 38.2091 0 36V4Z"
+              fill="#E0E6E3"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 28H12C11.448 28 11 27.553 11 27C11 26.447 11.448 26 12 26H28C28.552 26 29 26.447 29 27C29 27.553 28.552 28 28 28Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 14H12C11.448 14 11 13.553 11 13C11 12.447 11.448 12 12 12H28C28.552 12 29 12.447 29 13C29 13.553 28.552 14 28 14Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 21H12C11.448 21 11 20.553 11 20C11 19.447 11.448 19 12 19H28C28.552 19 29 19.447 29 20C29 20.553 28.552 21 28 21Z"
+              fill="#163A34"
+            />
+          </svg>
+        </button>
+        <div class="header__wrapper">
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/about.html" class="header__menu-link">About</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Recipes</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn">
+            <button class="btn header__btn-sign">Browse recipes</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="mission">
+        <div class="mission__content">
+          <p class="mission__color">Our mission</p>
+          <h2>Help more people cook nourishing meals, more often.</h2>
+          <p>
+            Healthy Recipe Finder was created to prove that healthy eating can
+            be convenient, affordable, and genuinely delicious.
+          </p>
+          <p>
+            We showcase quick, whole-food dishes that anyone can master—no fancy
+            equipment, no ultra-processed shortcuts—just honest ingredients and
+            straightforward steps.
+          </p>
+        </div>
+        <picture>
+          <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+          <source
+            media="(min-width: 600px)"
+            srcset="./assets/images/image-about-our-mission-large.webp"
+          />
+          <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+          <img
+            src="./assets/images/image-about-our-mission-small.webp"
+            alt="image our mission"
+          />
+        </picture>
+      </section>
+      <section class="exist-philosophy">
+        <div class="exist">
+          <h2>Why we exist</h2>
+          <div class="exist__content">
+            <h6>Cut through the noise.</h6>
+            <p>
+              The internet is bursting with recipes, yet most busy cooks still
+              default to take-away or packaged foods. We curate a tight
+              collection of fool-proof dishes so you can skip the scrolling and
+              start cooking.
+            </p>
+            <h6>Empower home kitchens.</h6>
+            <p>
+              When you control what goes into your meals, you control how you
+              feel. Every recipe is built around unrefined ingredients and ready
+              in about half an hour of active prep.
+            </p>
+            <h6>Make healthy look good.</h6>
+            <p>
+              High-resolution imagery shows you exactly what success looks
+              like—because we eat with our eyes first, and confidence matters.
+            </p>
+          </div>
+        </div>
+        <div class="philosophy">
+          <h2>Our food philosophy</h2>
+          <div class="philosophy__content">
+            <h6>Whole ingredients first.</h6>
+            <p>
+              Fresh produce, grains, legumes, herbs, and quality fats form the
+              backbone of every recipe.
+            </p>
+            <h6>Flavor without compromise.</h6>
+            <p>
+              Spices, citrus, and natural sweetness replace excess salt, sugar,
+              and additives.
+            </p>
+            <h6>Respect for time.</h6>
+            <p>
+              Weeknight meals should slot into real schedules; weekend cooking
+              can be leisurely but never wasteful.
+            </p>
+            <h6>Sustainable choices.</h6>
+            <p>
+              Short ingredient lists cut down on food waste and carbon
+              footprint, while plant-forward dishes keep things planet-friendly.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="plate">
+        <div class="plate__content">
+          <h2>Beyond the plate</h2>
+          <p>
+            We believe food is a catalyst for community and well-being. By
+            sharing approachable recipes, we hope to:
+          </p>
+          <ul class="plate__list">
+            <li class="plate__item">
+              Encourage family dinners and social cooking.
+            </li>
+            <li class="plate__item">
+              Reduce reliance on single-use packaging and delivery waste.
+            </li>
+            <li class="plate__item">
+              Spark curiosity about seasonal produce and local agriculture.
+            </li>
+          </ul>
+        </div>
+        <picture>
+          <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+          <source
+            media="(min-width: 600px)"
+            srcset="./assets/images/image-about-beyond-the-plate-large.webp"
+          />
+          <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+          <img
+            src="./assets/images/image-about-beyond-the-plate-small.webp"
+            alt="image beyond the plate"
+          />
+        </picture>
+      </section>
 
-  Help more people cook nourishing meals, more often.
-
-  Healthy Recipe Finder was created to prove that healthy 
-  eating can be convenient, affordable, and genuinely delicious. 
-
-  We showcase quick, whole-food dishes that anyone can master—no 
-  fancy equipment, no ultra-processed shortcuts—just honest 
-  ingredients and straightforward steps.
-
-  Why we exist
-
-  Cut through the noise. 
-  The internet is bursting with recipes, yet most busy cooks 
-  still default to take-away or packaged foods. We curate a 
-  tight collection of fool-proof dishes so you can skip the 
-  scrolling and start cooking.
-
-  Empower home kitchens. 
-  When you control what goes into your meals, you control how 
-  you feel. Every recipe is built around unrefined ingredients 
-  and ready in about half an hour of active prep.
-
-  Make healthy look good. 
-  High-resolution imagery shows you exactly what success looks 
-  like—because we eat with our eyes first, and confidence matters.
-
-  Our food philosophy
-
-  Whole ingredients first. 
-  Fresh produce, grains, legumes, herbs, and quality fats form the 
-  backbone of every recipe.
-
-  Flavor without compromise. 
-  Spices, citrus, and natural sweetness replace excess salt, sugar, 
-  and additives.
-
-  Respect for time. 
-  Weeknight meals should slot into real schedules; weekend cooking 
-  can be leisurely but never wasteful.
-
-  Sustainable choices. 
-  Short ingredient lists cut down on food waste and carbon footprint, 
-  while plant-forward dishes keep things planet-friendly.
-
-  Beyond the plate
-
-  We believe food is a catalyst for community and well-being. 
-  By sharing approachable recipes, we hope to:
-
-  Encourage family dinners and social cooking.
-  Reduce reliance on single-use packaging and delivery waste.
-  Spark curiosity about seasonal produce and local agriculture.
-
-  Ready to cook smarter?
-
-  Hit the button, pick a recipe, and get dinner on the table—fast.
-
-  Browse recipes
-
-  Made with ❤️ and 🥑
-
-</body>
+      <section class="smarter">
+        <h2>Ready to cook smarter?</h2>
+        <p>Hit the button, pick a recipe, and get dinner on the table—fast.</p>
+        <button class="btn btn__smarter">Browse recipes</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="footer__social">
+        <li>
+          <img src="./assets/images/icon-instagram.svg" alt="icon instagram" />
+        </li>
+        <li>
+          <img src="./assets/images/icon-bluesky.svg" alt="icon bluesky" />
+        </li>
+        <li><img src="./assets/images/icon-tiktok.svg" alt="icon tiktok" /></li>
+      </ul>
+      <p>Made with ❤️ and 🥑</p>
+    </footer>
+  </body>
 </html>
