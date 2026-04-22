@@ -21,7 +21,7 @@
         <a href="#" class="header__logo">
           <img src="./assets/images/logo.svg" alt="logo" />
         </a>
-        <button class="header__icon-open">
+        <button class="header__icon-open" aria-label="Open Menu" aria-expanded="false" aria-controls="navMenu">
           <svg
             width="40"
             height="40"
@@ -55,15 +55,15 @@
         </button>
         <div class="header__wrapper">
           <nav class="header__menu">
-            <ul class="header__menu-list">
+            <ul id="navMenu" class="header__menu-list">
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link">Home</a>
+                <a href="/" class="header__menu-link">Home</a>
               </li>
               <li class="header__menu-item">
                 <a href="/about.html" class="header__menu-link">About</a>
               </li>
               <li class="header__menu-item">
-                <a href="#" class="header__menu-link">Recipes</a>
+                <a href="/recipes.html" class="header__menu-link">Recipes</a>
               </li>
             </ul>
           </nav>
