@@ -1,20 +1,307 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Recipe finder website</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
-  <!-- Populate recipe details using data from the data.json file -->
+    <title>Frontend Mentor | Recipe finder website</title>
+  </head>
+  <body>
+    <!-- Populate recipe details using data from the data.json file -->
 
-  <!-- Select three other recipes to display -->
-
-  Made with ❤️ and 🥑
-
-</body>
+    <!-- Select three other recipes to display -->
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="./assets/images/logo.svg" alt="logo" />
+        </a>
+        <button
+          class="header__icon-open"
+          aria-label="Open Menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 4C0 1.79086 1.79086 0 4 0H36C38.2091 0 40 1.79086 40 4V36C40 38.2091 38.2091 40 36 40H4C1.79086 40 0 38.2091 0 36V4Z"
+              fill="#E0E6E3"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 28H12C11.448 28 11 27.553 11 27C11 26.447 11.448 26 12 26H28C28.552 26 29 26.447 29 27C29 27.553 28.552 28 28 28Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 14H12C11.448 14 11 13.553 11 13C11 12.447 11.448 12 12 12H28C28.552 12 29 12.447 29 13C29 13.553 28.552 14 28 14Z"
+              fill="#163A34"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 21H12C11.448 21 11 20.553 11 20C11 19.447 11.448 19 12 19H28C28.552 19 29 19.447 29 20C29 20.553 28.552 21 28 21Z"
+              fill="#163A34"
+            />
+          </svg>
+        </button>
+        <div class="header__wrapper">
+          <nav class="header__menu">
+            <ul id="navMenu" class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="/index.html" class="header__menu-link">Home</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/about.html" class="header__menu-link">About</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="/" class="header__menu-link">Recipes</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn">
+            <button class="btn header__btn-sign">Browse recipes</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <nav class="main__nav">recipes / mediterranean chickpea salad</nav>
+      <section class="recipe__info">
+        <picture>
+          <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+          <source
+            media="(min-width: 600px)"
+            srcset="./assets/images/mediterranean-chickpea-salad-large.webp"
+          />
+          <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+          <img
+            src="./assets/images/mediterranean-chickpea-salad-small.webp"
+            alt="image home hero"
+          />
+        </picture>
+        <div class="recipe__details">
+          <h2>mediterranean chickpea salad</h2>
+          <p>
+            A refreshing, protein-packed salad tossed in a lemon-olive oil
+            dressing
+          </p>
+          <div class="recipes__wrap-details">
+            <p class="details__serving">
+              <img
+                src="./assets/images/icon-servings.svg"
+                alt="icon servings"
+              />
+              Servings: <span>2</span>
+            </p>
+            <p class="details__prep">
+              <img
+                src="./assets/images/icon-prep-time.svg"
+                alt="icon prep time"
+              />
+              Prep:
+              <span>10 mins</span>
+            </p>
+            <p class="details__cook">
+              <img
+                src="./assets/images/icon-cook-time.svg"
+                alt="icon cook time"
+              />
+              Cook:
+              <span>10 min</span>
+            </p>
+          </div>
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>1 can (400 g) chickpeas, drained & rinsed</li>
+            <li>1 small cucumber, diced</li>
+            <li>1 cup cherry tomatoes, halved</li>
+            <li>1/2 red bell pepper, diced</li>
+            <li>1/4 red onion, finely chopped</li>
+            <li>2 Tbsp fresh parsley, chopped</li>
+            <li>2 Tbsp extra-virgin olive oil</li>
+            <li>1 Tbsp fresh lemon juice</li>
+            <li>Sea salt & black pepper to taste</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <ul>
+            <li>
+              In a large bowl combine chickpeas, cucumber, tomatoes, bell
+              pepper, red onion and parsley
+            </li>
+            <li>Drizzle with olive oil and lemon juice</li>
+            <li>Season with salt and pepper; toss to coat</li>
+            <li>Serve immediately or chill up to 2 days</li>
+          </ul>
+        </div>
+      </section>
+      <section class="more__recipes">
+        <h3>More recipes</h3>
+        <div class="recipes__wrap-info">
+          <picture>
+            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+            <source
+              media="(min-width: 600px)"
+              srcset="
+                ./assets/images/avocado-tomato-wholegrain-toast-large.webp
+              "
+            />
+            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+            <img
+              src="./assets/images/avocado-tomato-wholegrain-toast-small.webp"
+              alt="image avocado tomato wholegrain toast"
+            />
+          </picture>
+          <h4>Avocado & Tomato wholegrain Toast</h4>
+          <p>
+            Creamy avocado spread over toasted wholegrain bread, topped with
+            juicy tomatoes
+          </p>
+          <div class="recipes__wrap-details">
+            <p class="details__serving">
+              <img
+                src="./assets/images/icon-servings.svg"
+                alt="icon servings"
+              />
+              Servings: <span>1</span>
+            </p>
+            <p class="details__prep">
+              <img
+                src="./assets/images/icon-prep-time.svg"
+                alt="icon prep time"
+              />
+              Prep:
+              <span>5 mins</span>
+            </p>
+            <p class="details__cook">
+              <img
+                src="./assets/images/icon-cook-time.svg"
+                alt="icon cook time"
+              />
+              Cook:
+              <span>5 min</span>
+            </p>
+          </div>
+          <button class="btn btn__view">View Recipe</button>
+        </div>
+        <div class="recipes__wrap-info">
+          <picture>
+            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+            <source
+              media="(min-width: 600px)"
+              srcset="./assets/images/salmon-asparagus-large.webp"
+            />
+            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+            <img
+              src="./assets/images/salmon-asparagus-small.webp"
+              alt="image salmon asparagus"
+            />
+          </picture>
+          <h4>one-pan lemon garlic salmon with asparagus</h4>
+          <p>
+            A 15-minute weeknight dinner of flaky salmon and tender asparagus
+          </p>
+          <div class="recipes__wrap-details">
+            <p class="details__serving">
+              <img
+                src="./assets/images/icon-servings.svg"
+                alt="icon servings"
+              />
+              Servings: <span>2</span>
+            </p>
+            <p class="details__prep">
+              <img
+                src="./assets/images/icon-prep-time.svg"
+                alt="icon prep time"
+              />
+              Prep:
+              <span>5 mins</span>
+            </p>
+            <p class="details__cook">
+              <img
+                src="./assets/images/icon-cook-time.svg"
+                alt="icon cook time"
+              />
+              Cook:
+              <span>12 min</span>
+            </p>
+          </div>
+          <button class="btn btn__view">View Recipe</button>
+        </div>
+        <div class="recipes__wrap-info">
+          <picture>
+            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+            <source
+              media="(min-width: 600px)"
+              srcset="./assets/images/quinoa-veggie-bowl-large.webp"
+            />
+            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+            <img
+              src="./assets/images/quinoa-veggie-bowl-small.webp"
+              alt="image quinoa veggie bowl"
+            />
+          </picture>
+          <h4>quinoa veggie power bowl</h4>
+          <p>
+            A balanced bowl of fluffy quinoa, roasted veggies and healthy fats
+          </p>
+          <div class="recipes__wrap-details">
+            <p class="details__serving">
+              <img
+                src="./assets/images/icon-servings.svg"
+                alt="icon servings"
+              />
+              Servings: <span>2</span>
+            </p>
+            <p class="details__prep">
+              <img
+                src="./assets/images/icon-prep-time.svg"
+                alt="icon prep time"
+              />
+              Prep:
+              <span>10 mins</span>
+            </p>
+            <p class="details__cook">
+              <img
+                src="./assets/images/icon-cook-time.svg"
+                alt="icon cook time"
+              />
+              Cook:
+              <span>15 min</span>
+            </p>
+          </div>
+          <button class="btn btn__view">View Recipe</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="footer__social">
+        <li>
+          <img src="./assets/images/icon-instagram.svg" alt="icon instagram" />
+        </li>
+        <li>
+          <img src="./assets/images/icon-bluesky.svg" alt="icon bluesky" />
+        </li>
+        <li><img src="./assets/images/icon-tiktok.svg" alt="icon tiktok" /></li>
+      </ul>
+      <p>Made with ❤️ and 🥑</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>
