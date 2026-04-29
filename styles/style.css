@@ -64,8 +64,7 @@ button {
   background-color: transparent;
 }
 .header {
-  padding-block: 16px;
-  margin-block-end: 48px;
+  padding-block: 20px;
   border-bottom: 1px solid var(--neutral-300);
 }
 .header__container {
@@ -119,8 +118,9 @@ button {
   letter-spacing: -0.02em;
   color: hsl(218, 23%, 21%);
 }
-/* .header__btn {
-} */
+.header__btn {
+  padding-inline: 8px;
+}
 .btn {
   display: flex;
   align-items: center;
@@ -134,14 +134,22 @@ button {
   letter-spacing: -0.03em;
   text-align: center;
   color: var(--neutral-0);
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--neutral-900);
+    /* Отступ от кнопки */
+    outline-offset: 2px;
+  }
 }
-.header__btn-sign {
+.btn .header__btn-sign {
   width: 327px;
   height: 52px;
 }
-/* .main {
-
-} */
+.main {
+  margin-block-start: 48px;
+}
 .meals {
   margin-block-end: 64px;
 }
@@ -149,7 +157,8 @@ button {
   width: 343px;
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 52px;
+  /* font-size: 52px; */
+  font-size: clamp(3.25rem, calc(2.81rem + 1.878vw), 4.5rem);
   line-height: 110%;
   letter-spacing: -0.04em;
   color: var(--neutral-900);
@@ -191,17 +200,17 @@ button {
 .meals picture::before {
   content: "";
   position: absolute;
-  /* Размещаем линию */
-  top: -125px;
-  right: -15px;
   /* Параметры самой линии 
   Укажите реальную ширину вашей линии
   Укажите реальную высоту */
-  width: 375px;
-  height: 476px;
   background-image: url("../assets/images/pattern-squiggle-mobile.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  width: 375px;
+  height: 476px;
+  /* Размещаем линию */
+  top: -125px;
+  right: -15px;
   /* Кладем линию ПОД картинку */
   z-index: -1;
 }
@@ -209,15 +218,18 @@ button {
 .meals img {
   display: block; /* Убирает лишний отступ снизу у картинки */
   position: relative; /* Гарантирует, что картинка будет выше линии */
+  border-radius: 3px;
   z-index: 1;
 }
+/* Getting */
 .getting {
   margin-block-end: 64px;
 }
 .getting h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  /* font-size: clamp(40px, calc(37.183px + 0.751vw), 48px); */
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.04em;
   color: var(--neutral-900);
@@ -250,13 +262,15 @@ button {
   color: var(--neutral-600);
   margin-block: 0;
 }
+/* Built */
 .built {
   margin-block-end: 64px;
 }
 .built h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   color: var(--neutral-900);
@@ -801,19 +815,20 @@ input[type="radio"]:checked::after {
   color: var(--neutral-900);
   margin-block: 0 24px;
 }
-/*  */
+/* Smarter */
 .smarter {
   border-radius: 16px;
   padding: 48px 16px;
-  width: 343px;
-  height: 353px;
+  /* width: 343px; */
+  /* height: 353px; */
   background: var(--neutral-200);
   margin-block-end: 32px;
 }
 .smarter h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   text-align: center;
@@ -828,6 +843,7 @@ input[type="radio"]:checked::after {
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--neutral-600);
+  padding: 0 32px;
 }
 .btn__smarter {
   width: 176px;
@@ -844,8 +860,21 @@ input[type="radio"]:checked::after {
   column-gap: 24px;
   margin-block-end: 24px;
 }
-.footer__social li {
+.footer__social button {
   list-style-type: none;
+  cursor: pointer;
+  &:hover svg path {
+    fill: var(--neutral-600);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: 2px solid var(--neutral-900);
+    border-radius: 4px;
+    /* Отступ от кнопки */
+    outline-offset: 2px;
+  }
 }
 .footer p {
   font-family: var(--font-family);
@@ -855,4 +884,133 @@ input[type="radio"]:checked::after {
   letter-spacing: -0.02em;
   text-align: center;
   color: var(--neutral-900);
+}
+
+/* ------------------ Tablet -----------*/
+
+@media (min-width: 768px) {
+  body {
+    max-width: 768px;
+    min-height: 2982px;
+    padding-inline: 32px;
+  }
+  .header {
+    padding-block: 20px 32px;
+  }
+  .header__wrapper {
+    width: 100%;
+    align-items: start;
+  }
+  .header__btn {
+    width: 100%;
+  }
+  .header__btn-sign {
+    width: 100%;
+  }
+  .meals {
+    margin-block-end: 80px;
+  }
+  .meals h1 {
+    width: 100%;
+  }
+  .meals h1::after {
+    width: 210px;
+    height: 25px;
+  }
+  .meals picture::before {
+    background-image: url("../assets/images/pattern-squiggle-1.svg");
+    width: 768px;
+    height: 664px;
+    top: -70px;
+  }
+  .meals img {
+    border-radius: 7px;
+  }
+  /* Getting */
+  .getting {
+    padding-block-end: 80px;
+    margin-block-end: 0;
+    border-bottom: 1px solid var(--neutral-300);
+  }
+  .getting__block {
+    align-items: flex-start;
+    row-gap: 32px;
+  }
+  .getting__block img {
+    margin-block-end: 24px;
+  }
+  /* Built */
+  .built {
+    margin-block: 80px;
+  }
+  .built p {
+    margin-block-end: 40px;
+  }
+  .built span {
+    position: relative;
+  }
+  .built span::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 13px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    top: 10px;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+  /* Smarter */
+  .smarter {
+    padding-block-start: 80px;
+    position: relative;
+    z-index: 2;
+    margin-block-end: 0;
+  }
+  .smarter::after {
+    position: absolute;
+    content: "";
+    width: 151px;
+    height: 122px;
+    /* background-image: url("../assets/images/pattern-knife.svg"); */
+    background-image: url("../assets/images/pattern-knife-small.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0px;
+    right: 25px;
+    z-index: -11;
+  }
+  .smarter::before {
+    position: absolute;
+    content: "";
+    width: 132px;
+    height: 175px;
+    background-image: url("../assets/images/pattern-fork-small.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 5px;
+    z-index: -11;
+  }
+  .smarter p {
+    padding-block-end: 40px;
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-block: 40px;
+  }
+  .footer__social {
+    margin-block-end: 0;
+  }
+  .footer p {
+    margin-block: 0;
+  }
+}
+
+/* ------------------ Desktop -----------*/
+@media (min-width: 1440px) {
 }
