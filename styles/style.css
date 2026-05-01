@@ -392,10 +392,13 @@ button {
   position: absolute;
   content: "";
   background-image: url("../assets/images/icon-bullet-point.svg");
-  width: 26px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
   top: 1px;
   left: -45px;
+  /*  чтобы иконка не «подпрыгивала» выше базовой линии текста */
+  vertical-align: middle;
 }
 .exist-philosophy p {
   font-family: var(--font-family);
@@ -470,7 +473,7 @@ button {
 .explore h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   color: var(--neutral-900);
@@ -504,6 +507,7 @@ input[type="text"] {
   padding: 10px 16px;
   background: var(--neutral-0);
   padding-inline-start: 44px;
+  cursor: pointer;
 }
 .form__input {
   position: relative;
@@ -548,18 +552,18 @@ input[type="text"] {
 }
 .dropdown .btn__head {
   border: 1px solid #e0e6e3;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 343px;
   height: 47px;
-  background: #fff;
+  border-radius: 10px;
+  background: var(--neutral-0);
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: #163a34;
+  color: var(--neutral-900);
   cursor: pointer;
 }
 .dropdown .btn__head::after {
@@ -578,7 +582,7 @@ input[type="text"] {
   border-radius: 8px;
   padding: 8px;
   width: 240px;
-  height: 173px;
+  /* height: 173px; */
   box-shadow: 0 12px 22px -12px var(--neutral-300);
   background: var(--neutral-0);
   top: 53px;
@@ -590,14 +594,21 @@ input[type="text"] {
   visibility: visible;
 }
 .form__radio {
+  /* border: 1px solid var(--neutral-0);
   border-radius: 8px;
   padding: 8px;
   width: 224px;
   height: 43px;
-  background: var(--neutral-0);
+  background: var(--neutral-0); */
 }
 
 label {
+  display: block;
+  width: 224px;
+  height: 43px;
+  border: 1px solid var(--neutral-0);
+  border-radius: 8px;
+  padding: 8px 28px;
   position: relative;
   font-weight: 600;
   font-size: 18px;
@@ -605,14 +616,14 @@ label {
   letter-spacing: -0.02em;
   color: var(--neutral-600);
   cursor: pointer;
-  padding-inline-start: 26px;
+  transition: border 0.2s ease-in-out;
 }
 input[type="radio"] {
   position: absolute;
   width: 0;
   height: 0;
-  left: 0;
-  top: 5px;
+  left: 6px;
+  top: 13px;
 }
 input[type="radio"]::before {
   content: "";
@@ -621,7 +632,7 @@ input[type="radio"]::before {
   height: 16px;
   border-radius: 50%;
   background: transparent;
-  border: 2px solid var(--neutral-600);
+  border: 2px solid hsl(165, 15%, 84%);
 }
 input[type="radio"]:checked::after {
   position: absolute;
@@ -633,6 +644,10 @@ input[type="radio"]:checked::after {
   border-radius: 50%;
   left: 4px;
   top: 4px;
+  cursor: pointer;
+}
+input[type="radio"]:checked::before {
+  border-color: var(--neutral-600);
 }
 .clear__btn {
   border: none;
@@ -732,6 +747,7 @@ input[type="radio"]:checked::after {
   letter-spacing: -0.02em;
   color: var(--neutral-900);
   margin-block-end: 16px;
+  text-transform: capitalize;
 }
 .recipe__info {
   display: flex;
@@ -793,15 +809,21 @@ input[type="radio"]:checked::after {
   letter-spacing: -0.02em;
   color: var(--neutral-600);
   position: relative;
+  padding-block-end: 8px;
+}
+.recipe__details li:last-child {
+  padding-block-end: 0;
 }
 .recipe__details li::before {
   position: absolute;
   content: "";
   background-image: url("../assets/images/icon-bullet-point.svg");
-  width: 24px;
-  height: 24px;
-  top: 1px;
+  width: 24px; /* Целевая ширина */
+  height: 24px; /* Целевая высота */
+  background-size: contain; /* Сохраняет пропорции внутри 24x24 */
+  top: 3px;
   left: -32px;
+  vertical-align: middle;
 }
 .more__recipes {
   padding-block: 48px;
@@ -996,6 +1018,91 @@ input[type="radio"]:checked::after {
   .smarter p {
     padding-block-end: 40px;
   }
+  /* About */
+  /* Mission */
+  .mission {
+    padding-block: 16px 80px;
+  }
+  .mission__content {
+    margin-block-end: 64px;
+  }
+  /* Exist Philosophy*/
+  .exist-philosophy {
+    margin-block-start: 80px;
+  }
+  .exist-philosophy p {
+    margin-block-end: 32px;
+  }
+  .exist {
+    padding-block-end: 80px;
+  }
+  .philosophy {
+    margin-block-start: 80px;
+  }
+  .philosophy__content {
+    padding-block-end: 80px;
+  }
+  /* Plate */
+  .plate {
+    margin-block: 80px;
+  }
+  .plate__content {
+    margin-block-end: 40px;
+  }
+  /* Recipes */
+  /* Explore */
+  .explore {
+    margin-block-start: 64px;
+  }
+  /* Form */
+  .form {
+    flex-direction: row;
+    gap: 0 12px;
+  }
+  input[type="text"] {
+    width: 320px;
+    transition: border-color 0.3s; /* Плавный эффект */
+    &:hover {
+      border: 1px solid var(--neutral-900);
+      border-radius: 10px;
+    }
+  }
+  .dropdown .btn__head {
+    width: 180px;
+    transition: border-color 0.3s; /* Плавный эффект */
+    &:hover {
+      border: 1px solid var(--neutral-900);
+      border-radius: 10px;
+    }
+  }
+  .dropdown .btn__head::after {
+    right: 2px;
+  }
+  .dropdown.open {
+    border: 1px solid var(--neutral-900);
+    border-radius: 10px;
+  }
+  .recipes__wrap-details {
+    row-gap: 0;
+  }
+  /* Стандартный :focus работает только на элементах, которые могут принимать фокус ввода. 
+  label к ним не относится.
+  :focus-within — срабатывает на родителе (label), когда любой элемент внутри него (input) получает фокус.
+  :has(:checked) — если вы хотите, чтобы рамка оставалась активной после клика (когда кнопка выбрана): */
+  label:focus-within {
+    border: 2px solid var(--neutral-900);
+  }
+  label:has(input:checked) {
+    border-color: var(--neutral-900);
+  }
+  .btn__view {
+    width: 100%;
+  }
+  .clear__btn:focus {
+    outline: 2px solid var(--neutral-900);
+  }
+
+  /* Footer */
   .footer {
     display: flex;
     align-items: center;
