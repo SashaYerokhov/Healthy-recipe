@@ -174,7 +174,7 @@ button {
   background-color: var(--orange);
   top: 30px;
   left: 0;
-  opacity: 0.55;
+  opacity: 0.5;
 }
 .meals p {
   font-family: var(--font-family);
@@ -1120,4 +1120,135 @@ input[type="radio"]:checked::before {
 
 /* ------------------ Desktop -----------*/
 @media (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    min-height: 2672px;
+    margin: 0 auto;
+  }
+  .header {
+    padding-block: 32.5px;
+  }
+  .header__container {
+    position: static;
+  }
+  .header__logo {
+    width: 260px;
+  }
+  .header__icon-open {
+    display: none;
+  }
+  .header__wrapper {
+    position: static;
+    width: 0;
+    height: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 780px;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+  .header__menu {
+    padding: 0;
+  }
+  .header__menu-list {
+    flex-direction: row;
+    gap: 0 40px;
+  }
+  .header__menu-link {
+    display: inline-block;
+  }
+  .header__menu-link.active {
+    position: relative;
+  }
+  .header__menu-link.active::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: var(--orange);
+    translate: -50% 0;
+  }
+  .header__btn-sign {
+    width: 167px;
+    height: 52px;
+    padding: 0;
+    margin-left: auto;
+  }
+  .main {
+    margin-block-start: 80px;
+  }
+  /* Meals */
+  .meals {
+    margin-block-end: 96px;
+  }
+  .meals h1 {
+    text-align: center;
+  }
+  .meals h1::after {
+    width: 265px;
+    height: 38px;
+    left: 295px;
+    top: 37px;
+    margin-block-end: 12px;
+  }
+  .meals p {
+    width: 580px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+  }
+  .btn__meals {
+    margin: 0 auto 80px auto;
+  }
+  .meals picture::before {
+    background-image: url("../assets/images/pattern-squiggle-1.svg");
+    width: 1440px;
+    height: 616px;
+    background-size: contain;
+    top: -155px;
+    left: -30px;
+  }
+  /* Getting */
+  /* .getting {
+    margin-block-end: 96px;
+  } */
+  .getting h2 {
+    text-align: center;
+  }
+  .getting__block {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 32px;
+  }
+  .getting__block img {
+    margin-block-end: 24px;
+  }
+  .getting__block-pecipes,
+  .getting__block-fuss,
+  .getting__block-searh {
+    width: 376px;
+  }
+  /* Built */
+  .built {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+    margin-block: 96px;
+  }
+  .built p {
+    width: 509px;
+  }
+  /* Smarter */
+  .smarter {
+    margin: 0;
+    padding-block: 96px;
+  }
+  .smarter p {
+    padding: 0;
+    margin-block: 0 40px;
+  }
 }

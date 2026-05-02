@@ -111,3 +111,48 @@ document.addEventListener("DOMContentLoaded", () => {
   //   });
   // });
 });
+
+/**
+ * Самый современный и простой вариант для «переезжающей» линии сегодня — использовать CSS Variables и пару строк JS:
+ * Создается один отдельный пустой элемент div (линия).
+ * При клике на пункт меню JS берет его width и offsetLeft.
+ * Эти значения записываются в CSS-переменные, и линия плавно перемещается через transform и transition.
+ *
+ * https://vitaliy-kirenkov.medium.com/sliding-underline-in-navigation-b95399fc4601
+ */
+
+// document.querySelectorAll(".header__menu-link").forEach((link) => {
+//   if (link.href === window.location.href) {
+//     link.classList.add("active");
+//   } else {
+//     link.classList.remove("active");
+//   }
+// });
+
+// Под пунктом меню - черточка - при переходе на страницу - черточка сохраняется
+const menuLinks = document.querySelectorAll(".header__menu-link");
+// console.log(menuLinks); // NodeList
+menuLinks.forEach((link) => {
+  // console.log(link.href);
+  // console.log(window.location.href);
+  // console.log(link.pathname);
+  // console.log(window.location.pathname);
+
+  if (window.location.pathname.includes(link.getAttribute("href"))) {
+    link.classList.add("active");
+  }
+
+  // если совпадают - добавляется класс
+  if (link.href === window.location.href) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+
+/**
+ * Чтобы подстраховаться, можно использовать чуть более гибкую проверку:javascript
+ * if (window.location.pathname.includes(link.getAttribute('href'))) {
+    link.classList.add("active");
+}
+ */
