@@ -132,8 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Под пунктом меню - черточка - при переходе на страницу - черточка сохраняется
 const menuLinks = document.querySelectorAll(".header__menu-link");
 // console.log(menuLinks); // NodeList
-const menuLinks = document.querySelectorAll(".header__menu-link");
-
 menuLinks.forEach((link) => {
   // Получаем чистый путь из href ссылки (например, about.html)
   const linkPath = link.getAttribute('href').replace('./', '');
