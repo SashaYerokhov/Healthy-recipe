@@ -338,7 +338,7 @@ button {
 .mission__content h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   color: var(--neutral-900);
@@ -372,7 +372,7 @@ button {
 .exist-philosophy h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 48px;
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.04em;
   color: var(--neutral-900);
@@ -435,7 +435,7 @@ button {
 .plate__content h2 {
   font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   color: var(--neutral-900);
@@ -496,6 +496,12 @@ button {
   flex-direction: column;
   row-gap: 12px;
   margin-block-end: 24px;
+}
+.select {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 12px;
 }
 input[type="text"] {
   display: block;
@@ -754,16 +760,16 @@ input[type="radio"]:checked::before {
   align-items: center;
   flex-direction: column;
   row-gap: 40px;
+  border-bottom: 1px solid var(--neutral-300);
+  padding-block-end: 49px;
 }
 .recipe__info picture img {
   border-radius: 10px;
 }
-.recipe__details {
-  border-bottom: 1px solid var(--neutral-300);
-}
 .recipe__details h2 {
+  font-family: var(--second-family);
   font-weight: 800;
-  font-size: 40px;
+  font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
   line-height: 120%;
   letter-spacing: -0.05em;
   color: var(--neutral-900);
@@ -798,9 +804,9 @@ input[type="radio"]:checked::before {
 .recipe__details ul:first-of-type {
   margin-block-end: 20px;
 }
-.recipe__details ul:last-of-type {
+/* .recipe__details ul:last-of-type {
   padding-block-end: 49px;
-}
+} */
 .recipe__details li {
   list-style-type: none;
   font-weight: 500;
@@ -836,6 +842,12 @@ input[type="radio"]:checked::before {
   letter-spacing: -0.03em;
   color: var(--neutral-900);
   margin-block: 0 24px;
+}
+.more__recipes-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  column-gap: 32px;
 }
 /* Smarter */
 .smarter {
@@ -1059,6 +1071,10 @@ input[type="radio"]:checked::before {
     flex-direction: row;
     gap: 0 12px;
   }
+  .select {
+    flex-direction: row;
+    gap: 0 12px;
+  }
   input[type="text"] {
     width: 320px;
     transition: border-color 0.3s; /* Плавный эффект */
@@ -1124,6 +1140,7 @@ input[type="radio"]:checked::before {
     max-width: 1440px;
     min-height: 2672px;
     margin: 0 auto;
+    padding: 0;
   }
   .header {
     padding-block: 32.5px;
@@ -1250,5 +1267,118 @@ input[type="radio"]:checked::before {
   .smarter p {
     padding: 0;
     margin-block: 0 40px;
+  }
+  /* About */
+  /* Mission */
+  .mission {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 64px;
+    padding-block-start: 0 96px;
+  }
+  .mission__content {
+    max-width: 510px;
+    min-height: 450px;
+  }
+  .mission__content h2 {
+    width: 475px;
+  }
+  /* Exist Philosophy*/
+  .exist-philosophy {
+    margin-block-start: 96px;
+  }
+  .exist,
+  .philosophy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 64px;
+  }
+  .exist {
+    padding-block-end: 96px;
+  }
+
+  .exist-philosophy .exist h2 {
+    min-width: 372px;
+    margin: 0;
+  }
+  .philosophy h2 {
+    max-width: 376px;
+    margin: 0;
+  }
+  .philosophy {
+    margin-block-start: 96px;
+  }
+  .philosophy__content {
+    padding-block-end: 96px;
+  }
+  /* Plate */
+  .plate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 64px;
+    margin-block: 96px;
+  }
+  /* Recipes */
+  /* Explore */
+  .explore {
+    margin-block: 80px 64px;
+  }
+  .explore h2 {
+    text-align: center;
+  }
+  .explore p {
+    max-width: 724px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* Form */
+  .form {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: 124px;
+  }
+  .select {
+    column-gap: 16px;
+  }
+  .recipes__wrap {
+    grid-template-columns: repeat(auto-fill, minmax(376px, 376px));
+    justify-items: center;
+    column-gap: 32px;
+    /* margin-block-end: 96px; */
+    margin: 0 124px 96px 124px;
+  }
+  .recipes__wrap-info {
+    width: 376px;
+    height: 554px;
+  }
+  .recipes__wrap-info picture img {
+    border-radius: 10px;
+    width: 360px;
+    height: 300px;
+  }
+  .recipes__wrap-info h4 {
+    width: 344px;
+  }
+  /* Recipe */
+  /* Нужно уменишить высоту 2018px */
+  .recipe__info {
+    flex-direction: row;
+    gap: 0 40px;
+    padding-block-end: 64px;
+  }
+  .recipe__info picture img {
+    width: 580px;
+    height: 580px;
+  }
+  .more__recipes {
+    margin-block: 64px 96px;
+    margin-inline: 124px;
+  }
+  .more__recipes-block {
+    flex-direction: row;
+    gap: 0 32px;
   }
 }
