@@ -156,3 +156,20 @@ menuLinks.forEach((link) => {
     link.classList.add("active");
 }
  */
+
+
+/**
+ * const menuLinks = document.querySelectorAll(".header__menu-link");
+
+menuLinks.forEach((link) => {
+  const path = window.location.pathname;
+  const href = link.getAttribute('href');
+
+  // Условие: если путь совпадает ИЛИ если мы в корне, а ссылка ведет на index.html
+  if (path.endsWith(href) || (href.includes('index.html') && path.endsWith('/'))) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+ */
