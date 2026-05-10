@@ -38,6 +38,12 @@ body {
   background-color: var(--neutral-100);
   /* position: relative; */
 }
+hr {
+  border: none; /* Убираем стандартную рамку */
+  background-color: var(--neutral-300); /* Цвет линии */
+  height: 1px; /* Толщина */
+  width: 100%; /* Ширина */
+}
 img {
   /* Чтобы ширина не выходила за экран изображения */
   max-width: 100%;
@@ -66,11 +72,9 @@ button {
   max-width: 363px;
   margin-inline: auto;
   padding-inline: 10px;
-  /* border: 2px solid black; */
 }
 .header {
   padding-block: 20px;
-  border-bottom: 1px solid var(--neutral-300);
 }
 .header__container {
   display: flex;
@@ -139,6 +143,10 @@ button {
   letter-spacing: -0.03em;
   text-align: center;
   color: var(--neutral-0);
+  transition: background-color 450ms ease-in-out;
+  &:hover {
+    background-color: var(--neutral-600);
+  }
   &:focus {
     outline: none;
   }
@@ -173,12 +181,12 @@ button {
   margin-block: 0 16px;
 }
 /* декоративная полоска в заголовке */
- .meals h1 span {
-  background-image: url('../assets/images/hero-background.svg');
+.meals h1 span {
+  background-image: url("../assets/images/hero-background.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom 25%;
- }
+}
 .meals p {
   font-family: var(--font-family);
   font-weight: 500;
@@ -353,41 +361,34 @@ button {
 /* Mission */
 .mission {
   padding-block-end: 64px;
-  border-bottom: 1px solid var(--neutral-300);
 }
 .mission__content {
   margin-block-end: 40px;
 }
 .mission__color {
   font-family: var(--second-family);
+  width: fit-content;
+  /*  указывает элементу использовать столько горизонтального пространства, сколько необходимо для его содержимого, но не более максимального доступного пространства в его контейнере.  */
+  height: 32px;
+  padding-inline: 6px;
+  text-align: center;
+  align-content: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.5px;
   color: var(--neutral-900);
-  position: relative;
+  background: var(--orange);
+  border-radius: 6px;
+  margin-block: 0 24px;
 }
-.mission__color::after {
-  position: absolute;
-  content: "";
-  width: 110px;
-  height: 25px;
-  border-radius: 5px;
-  background-color: var(--orange);
-  top: 2px;
-  left: -2px;
-  opacity: 0.85;
-  z-index: -1;
-}
-.mission__content p:first-child {
-  margin-block-end: 24px;
-}
-.mission__content h2 {
+
+.mission__content hgroup p {
   font-family: var(--second-family);
-  font-weight: 800;
   font-size: clamp(2.5rem, calc(2.324rem + 0.751vw), 3rem);
+  font-weight: 800;
   line-height: 120%;
-  letter-spacing: -0.05em;
+  letter-spacing: -2px;
   color: var(--neutral-900);
   margin-block: 0 24px;
 }
@@ -400,7 +401,7 @@ button {
   color: var(--neutral-600);
   margin-block: 0;
 }
-.mission__content p:nth-child(3) {
+.mission__content p:not(:last-child) {
   margin-block-end: 16px;
 }
 .mission img {
@@ -458,12 +459,10 @@ button {
 }
 .exist {
   padding-block-end: 48px;
-  border-bottom: 1px solid var(--neutral-300);
 }
 
 .philosophy {
   margin-block-start: 48px;
-  border-bottom: 1px solid var(--neutral-300);
 }
 .philosophy__content p:last-child {
   margin-block-end: 0;
@@ -498,15 +497,28 @@ button {
   margin-block: 0 12px;
 }
 .plate__list {
-  padding-inline-start: 32px;
+  list-style-type: none;
 }
-.plate__item {
+.plate__list li {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: var(--neutral-600);
+  padding-inline-start: 32px;
+  position: relative;
+}
+.plate__list li::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--neutral-600);
+  top: 0;
+  left: 0;
+  transform: translate(150%, 150%);
 }
 
 .plate img {
