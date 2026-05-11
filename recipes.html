@@ -78,7 +78,7 @@
         </div>
       </div>
     </header>
-    <hr>
+    <hr />
     <main class="main">
       <section class="explore container">
         <h2>Explore our simple, healthy recipes</h2>
@@ -89,447 +89,463 @@
           catch your eye.
         </p>
       </section>
-      <form action="#" id="form" class="form container">
-        <div class="select">
-          <div class="dropdown" id="prep-selected">
-            <button class="btn__head">Max Prep Time</button>
-            <div class="selected">
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="0" />
-                  0 minutes
-                </label>
+      <section class="recipes container">
+        <form action="#" id="form" class="form">
+          <div class="select">
+            <div class="dropdown" id="prep-selected">
+              <button class="btn__head">Max Prep Time</button>
+              <div class="selected">
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="0" />
+                    0 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="5" />
+                    5 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="10" />
+                    10 minutes
+                  </label>
+                </div>
+                <button class="clear__btn">Clear</button>
               </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="5" />
-                  5 minutes
-                </label>
+            </div>
+            <div class="dropdown" id="cook-selected">
+              <button class="btn__head">Max Cook Time</button>
+              <div class="selected">
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="0" />
+                    0 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="5" />
+                    5 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="10" />
+                    10 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="15" />
+                    15 minutes
+                  </label>
+                </div>
+                <div class="form__radio">
+                  <label>
+                    <input type="radio" name="option" value="20" />
+                    20 minutes
+                  </label>
+                </div>
+                <button class="clear__btn">Clear</button>
               </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="10" />
-                  10 minutes
-                </label>
-              </div>
-              <button class="clear__btn">Clear</button>
             </div>
           </div>
-          <div class="dropdown" id="cook-selected">
-            <button class="btn__head">Max Cook Time</button>
-            <div class="selected">
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="0" />
-                  0 minutes
-                </label>
-              </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="5" />
-                  5 minutes
-                </label>
-              </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="10" />
-                  10 minutes
-                </label>
-              </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="15" />
-                  15 minutes
-                </label>
-              </div>
-              <div class="form__radio">
-                <label>
-                  <input type="radio" name="option" value="20" />
-                  20 minutes
-                </label>
-              </div>
-              <button class="clear__btn">Clear</button>
+          <div class="form__input">
+            <input type="text" placeholder="Search by name or ingredient..." />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="21"
+              fill="none"
+              viewBox="0 0 20 21"
+            >
+              <path
+                fill="#163A34"
+                fill-rule="evenodd"
+                d="M3.336 9.318A5.872 5.872 0 0 1 9.2 3.453a5.872 5.872 0 0 1 5.865 5.865 5.873 5.873 0 0 1-5.865 5.866 5.873 5.873 0 0 1-5.865-5.866Zm15.412 8.716-3.832-3.823a7.492 7.492 0 0 0 1.817-4.893c0-4.153-3.38-7.532-7.532-7.532-4.153 0-7.532 3.38-7.532 7.532 0 4.153 3.38 7.532 7.532 7.532a7.477 7.477 0 0 0 4.494-1.502l3.876 3.866 1.177-1.18Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </form>
+        <ul class="recipes__wrap">
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/mediterranean-chickpea-salad-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
+              <img
+                src="./assets/images/mediterranean-chickpea-salad-small.webp"
+                alt="image home hero"
+              />
+            </picture>
+            <h4>mediterranean chickpea salad</h4>
+            <p>
+              A refreshing, protein-packed salad tossed in a lemon-olive oil
+              dressing
+            </p>
+            <div class="recipes__wrap-details">
+              <span>Servings: 2</span><span>Prep: 10 mins</span
+              ><span>Cook: 0 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>2</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>10 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>10 min</span>
+              </p> -->
             </div>
-          </div>
-        </div>
-        <div class="form__input">
-          <input type="text" placeholder="Search by name or ingredient..." />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="21"
-            fill="none"
-            viewBox="0 0 20 21"
-          >
-            <path
-              fill="#163A34"
-              fill-rule="evenodd"
-              d="M3.336 9.318A5.872 5.872 0 0 1 9.2 3.453a5.872 5.872 0 0 1 5.865 5.865 5.873 5.873 0 0 1-5.865 5.866 5.873 5.873 0 0 1-5.865-5.866Zm15.412 8.716-3.832-3.823a7.492 7.492 0 0 0 1.817-4.893c0-4.153-3.38-7.532-7.532-7.532-4.153 0-7.532 3.38-7.532 7.532 0 4.153 3.38 7.532 7.532 7.532a7.477 7.477 0 0 0 4.494-1.502l3.876 3.866 1.177-1.18Z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </div>
-      </form>
-      <section class="recipes__wrap container">
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/mediterranean-chickpea-salad-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/mediterranean-chickpea-salad-small.webp"
-              alt="image home hero"
-            />
-          </picture>
-          <h4>mediterranean chickpea salad</h4>
-          <p>
-            A refreshing, protein-packed salad tossed in a lemon-olive oil
-            dressing
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="
+                  ./assets/images/avocado-tomato-wholegrain-toast-large.webp
+                "
               />
-              Servings: <span>2</span>
-            </p>
-            <p class="details__prep">
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
+                src="./assets/images/avocado-tomato-wholegrain-toast-small.webp"
+                alt="image avocado tomato wholegrain toast"
               />
-              Prep:
-              <span>10 mins</span>
+            </picture>
+            <h4>Avocado & Tomato wholegrain Toast</h4>
+            <p>
+              Creamy avocado spread over toasted wholegrain bread, topped with
+              juicy tomatoes
             </p>
-            <p class="details__cook">
+            <div class="recipes__wrap-details">
+              <span>Servings: 1</span><span>Prep: 5 mins</span
+              ><span>Cook: 5 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>1</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>5 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>5 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/salmon-asparagus-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
+                src="./assets/images/salmon-asparagus-small.webp"
+                alt="image salmon asparagus"
               />
-              Cook:
-              <span>10 min</span>
+            </picture>
+            <h4>one-pan lemon garlic salmon with asparagus</h4>
+            <p>
+              A 15-minute weeknight dinner of flaky salmon and tender asparagus
             </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="
-                ./assets/images/avocado-tomato-wholegrain-toast-large.webp
-              "
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/avocado-tomato-wholegrain-toast-small.webp"
-              alt="image avocado tomato wholegrain toast"
-            />
-          </picture>
-          <h4>Avocado & Tomato wholegrain Toast</h4>
-          <p>
-            Creamy avocado spread over toasted wholegrain bread, topped with
-            juicy tomatoes
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
+            <div class="recipes__wrap-details">
+              <span>Servings: 2</span><span>Prep: 5 mins</span
+              ><span>Cook: 12 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>2</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>5 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>12 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/quinoa-veggie-bowl-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
+                src="./assets/images/quinoa-veggie-bowl-small.webp"
+                alt="image quinoa veggie bowl"
               />
-              Servings: <span>1</span>
+            </picture>
+            <h4>quinoa veggie power bowl</h4>
+            <p>
+              A balanced bowl of fluffy quinoa, roasted veggies and healthy fats
             </p>
-            <p class="details__prep">
+            <div class="recipes__wrap-details">
+              <span>Servings: 2</span><span>Prep: 10 mins</span
+              ><span>Cook: 15 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>2</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>10 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>15 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/sweet-potato-tacos-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
+                src="./assets/images/sweet-potato-tacos-small.webp"
+                alt="image sweet potato tacos"
               />
-              Prep:
-              <span>5 mins</span>
+            </picture>
+            <h4>sweet potato black bean tacos</h4>
+            <p>
+              Smoky roasted sweet potatoes and black beans tucked into warm
+              tortillas.
             </p>
-            <p class="details__cook">
+            <div class="recipes__wrap-details">
+              <span>Servings: 3</span><span>Prep: 10 mins</span
+              ><span>Cook: 15 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>3</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>10 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>15 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/greek-yogurt-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
+                src="./assets/images/greek-yogurt-small.webp"
+                alt="image greek yogurt"
               />
-              Cook:
-              <span>5 min</span>
+            </picture>
+            <h4>greek yogurt Berry parfait</h4>
+            <p>
+              Layers of creamy yogurt, fresh berries and crunchy oats for a
+              high-protein snack.
             </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/salmon-asparagus-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/salmon-asparagus-small.webp"
-              alt="image salmon asparagus"
-            />
-          </picture>
-          <h4>one-pan lemon garlic salmon with asparagus</h4>
-          <p>
-            A 15-minute weeknight dinner of flaky salmon and tender asparagus
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
+            <div class="recipes__wrap-details">
+              <span>Servings: 1</span><span>Prep: 5 mins</span
+              ><span>Cook: 0 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>1</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>5 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>0 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/lentil-soup-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
+                src="./assets/images/lentil-soup-small.webp"
+                alt="image lentil soup"
               />
-              Servings: <span>2</span>
-            </p>
-            <p class="details__prep">
+            </picture>
+            <h4>lentil & spinach soup</h4>
+            <p>A hearty 30-minute soup rich in plant protein and iron</p>
+            <div class="recipes__wrap-details">
+              <span>Servings: 4</span><span>Prep: 10 mins</span
+              ><span>Cook: 20 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>4</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>10 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>20 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+          <li class="recipes__wrap-info">
+            <picture>
+              <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
+              <source
+                media="(min-width: 600px)"
+                srcset="./assets/images/banana-pancakes-large.webp"
+              />
+              <!-- Картинка для всех остальных (мобильных) по умолчанию -->
               <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
+                src="./assets/images/banana-pancakes-small.webp"
+                alt="image banana pancakes"
               />
-              Prep:
-              <span>5 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>12 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/quinoa-veggie-bowl-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/quinoa-veggie-bowl-small.webp"
-              alt="image quinoa veggie bowl"
-            />
-          </picture>
-          <h4>quinoa veggie power bowl</h4>
-          <p>
-            A balanced bowl of fluffy quinoa, roasted veggies and healthy fats
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
-              />
-              Servings: <span>2</span>
-            </p>
-            <p class="details__prep">
-              <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
-              />
-              Prep:
-              <span>10 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>15 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/sweet-potato-tacos-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/sweet-potato-tacos-small.webp"
-              alt="image sweet potato tacos"
-            />
-          </picture>
-          <h4>sweet potato black bean tacos</h4>
-          <p>
-            Smoky roasted sweet potatoes and black beans tucked into warm
-            tortillas.
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
-              />
-              Servings: <span>3</span>
-            </p>
-            <p class="details__prep">
-              <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
-              />
-              Prep:
-              <span>10 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>15 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/greek-yogurt-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/greek-yogurt-small.webp"
-              alt="image greek yogurt"
-            />
-          </picture>
-          <h4>greek yogurt Berry parfait</h4>
-          <p>
-            Layers of creamy yogurt, fresh berries and crunchy oats for a
-            high-protein snack.
-          </p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
-              />
-              Servings: <span>1</span>
-            </p>
-            <p class="details__prep">
-              <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
-              />
-              Prep:
-              <span>5 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>0 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/lentil-soup-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/lentil-soup-small.webp"
-              alt="image lentil soup"
-            />
-          </picture>
-          <h4>lentil & spinach soup</h4>
-          <p>A hearty 30-minute soup rich in plant protein and iron</p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
-              />
-              Servings: <span>4</span>
-            </p>
-            <p class="details__prep">
-              <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
-              />
-              Prep:
-              <span>10 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>20 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
-        <div class="recipes__wrap-info">
-          <picture>
-            <!-- Картинка для планшетов и десктопов (от 768px и выше) -->
-            <source
-              media="(min-width: 600px)"
-              srcset="./assets/images/banana-pancakes-large.webp"
-            />
-            <!-- Картинка для всех остальных (мобильных) по умолчанию -->
-            <img
-              src="./assets/images/banana-pancakes-small.webp"
-              alt="image banana pancakes"
-            />
-          </picture>
-          <h4>banana oat pancakes</h4>
-          <p>Four-free pancakes sweetened naturally with ripe bananas.</p>
-          <div class="recipes__wrap-details">
-            <p class="details__serving">
-              <img
-                src="./assets/images/icon-servings.svg"
-                alt="icon servings"
-              />
-              Servings: <span>2</span>
-            </p>
-            <p class="details__prep">
-              <img
-                src="./assets/images/icon-prep-time.svg"
-                alt="icon prep time"
-              />
-              Prep:
-              <span>5 mins</span>
-            </p>
-            <p class="details__cook">
-              <img
-                src="./assets/images/icon-cook-time.svg"
-                alt="icon cook time"
-              />
-              Cook:
-              <span>10 min</span>
-            </p>
-          </div>
-          <button class="btn btn__view">View Recipe</button>
-        </div>
+            </picture>
+            <h4>banana oat pancakes</h4>
+            <p>Four-free pancakes sweetened naturally with ripe bananas.</p>
+            <div class="recipes__wrap-details">
+              <span>Servings: 2</span><span>Prep: 5 mins</span
+              ><span>Cook: 10 min</span>
+              <!-- <p class="details__serving">
+                <img
+                  src="./assets/images/icon-servings.svg"
+                  alt="icon servings"
+                />
+                Servings: <span>2</span>
+              </p> -->
+              <!-- <p class="details__prep">
+                <img
+                  src="./assets/images/icon-prep-time.svg"
+                  alt="icon prep time"
+                />
+                Prep:
+                <span>5 mins</span>
+              </p> -->
+              <!-- <p class="details__cook">
+                <img
+                  src="./assets/images/icon-cook-time.svg"
+                  alt="icon cook time"
+                />
+                Cook:
+                <span>10 min</span>
+              </p> -->
+            </div>
+            <button class="btn btn__view">View Recipe</button>
+          </li>
+        </ul>
       </section>
-
       <!-- Populate recipes using data from the data.json file -->
     </main>
-
     <footer class="footer container">
       <div class="footer__social">
         <button>
