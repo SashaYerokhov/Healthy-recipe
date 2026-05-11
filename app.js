@@ -133,17 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
 const menuLinks = document.querySelectorAll(".header__menu-link");
 // console.log(menuLinks); // NodeList
 menuLinks.forEach((link) => {
-  // console.log(link.href);
-  // console.log(window.location.href);
-  // console.log(link.pathname);
-  // console.log(window.location.pathname);
-
-  if (window.location.pathname.includes(link.getAttribute("href"))) {
-    link.classList.add("active");
-  }
-
-  // если совпадают - добавляется класс
-  if (link.href === window.location.href) {
+  // Получаем чистый путь из href ссылки (например, about.html)
+  const linkPath = link.getAttribute('href').replace('./', '');
+  
+  // Проверяем, заканчивается ли текущий адрес этим путем
+  if (window.location.pathname.endsWith(linkPath) || 
+     (linkPath === 'index.html' && window.location.pathname.endsWith('/'))) {
     link.classList.add("active");
   } else {
     link.classList.remove("active");
